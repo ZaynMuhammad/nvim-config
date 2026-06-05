@@ -1,0 +1,21 @@
+# Neovim local/runtime artifacts
+.lazy/
+lazy-lock-backup.json
+
+# Local secrets or machine-specific config
+.env
+.env.*
+local.lua
+lua/local.lua
+lua/config/local.lua
+
+# Swap, backup, and session files
+*.swp
+*.swo
+*.tmp
+Session.vim
+
+# OS/editor noise
+.DS_Store
+.idea/
+.vscode/
