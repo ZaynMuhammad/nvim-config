@@ -25,6 +25,24 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = function()
+      vim.diagnostic.config({
+        float = {
+          border = "rounded",
+          source = "if_many",
+        },
+      })
+
+      local diagnostic_hover = vim.api.nvim_create_augroup("DiagnosticHover", { clear = true })
+      vim.api.nvim_create_autocmd("CursorHold", {
+        group = diagnostic_hover,
+        callback = function()
+          vim.diagnostic.open_float(nil, {
+            focus = false,
+            scope = "cursor",
+          })
+        end,
+      })
+
       for server, config in pairs(servers) do
         vim.lsp.config(server, config)
       end
