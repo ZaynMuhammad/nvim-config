@@ -8,6 +8,10 @@ return {
     local diagnostic_cause = require("config.nvim-tree-diagnostics").decorator()
 
     return {
+      hijack_netrw = false,
+      hijack_directories = {
+        enable = false,
+      },
       diagnostics = {
         enable = true,
         show_on_dirs = true,
