@@ -5,6 +5,7 @@ return {
   lazy = false,
   opts = {
     flavour = "mocha",
+    transparent_background = true,
     integrations = {
       mini = true,
       native_lsp = { enabled = true },

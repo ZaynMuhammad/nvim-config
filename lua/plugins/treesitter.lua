@@ -1,9 +1,27 @@
 local parsers = {
   "lua",
+  "vim",
+  "vimdoc",
+  "query",
+
   "javascript",
   "typescript",
+  "tsx",
+  "json",
+  "jsonc",
+  "html",
+  "css",
+
+  "rust",
   "c_sharp",
   "gdscript",
+
+  "bash",
+  "dockerfile",
+  "toml",
+  "yaml",
+  "markdown",
+  "markdown_inline",
 }
 
 return {
