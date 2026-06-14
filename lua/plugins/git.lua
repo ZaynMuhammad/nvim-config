@@ -1,5 +1,18 @@
 return {
   {
+    "sindrets/diffview.nvim",
+    cmd = { "DiffviewOpen", "DiffviewFileHistory", "DiffviewClose", "DiffviewToggleFiles", "DiffviewFocusFiles" },
+    dependencies = { "nvim-lua/plenary.nvim" },
+    keys = {
+      { "<leader>go", "<cmd>DiffviewOpen<cr>", desc = "Open diffview" },
+      { "<leader>gO", "<cmd>DiffviewOpen HEAD~1<cr>", desc = "Open diffview HEAD~1" },
+      { "<leader>gh", "<cmd>DiffviewFileHistory %<cr>", desc = "Current file history" },
+      { "<leader>gH", "<cmd>DiffviewFileHistory<cr>", desc = "Repository history" },
+      { "<leader>gq", "<cmd>DiffviewClose<cr>", desc = "Close diffview" },
+    },
+    opts = {},
+  },
+  {
     "lewis6991/gitsigns.nvim",
     event = { "BufReadPre", "BufNewFile" },
     opts = {
